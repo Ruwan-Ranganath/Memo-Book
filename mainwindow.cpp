@@ -3,7 +3,7 @@
 #include "QMessageBox"
 
 
-#define Path_to_DB "E:/qt-projects/memo.sqlite"
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -11,20 +11,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    myDB = QSqlDatabase::addDatabase("QSQLITE");
-    myDB.setDatabaseName(Path_to_DB);
-    QFileInfo checkFile(Path_to_DB);
 
-    if (checkFile.isFile())
-    {
-        if(myDB.open())
+        if(connOpen())
         {
             ui->lblResult->setText("[+] Connected to Database");
-        }
-    }else {
+        }else {
         ui->lblResult->setText("'<b>[+] Lost Connection to database</b>");
-
     }
+
 }
 
 MainWindow::~MainWindow()
@@ -47,18 +41,24 @@ void MainWindow::on_btnClose_clicked()
 
 void MainWindow::on_btnLogin_clicked()
 {
+
+
     QString Username , Password;
 
     Username = ui->txtUserName->text();
     Password = ui->txtPassword->text();
 
-    if(!myDB.open()){
+    if(!connOpen()){
         qDebug() << "No Connection to Database found";
         return;
     }
 
+    connOpen();
+
     QSqlQuery qry;
-    if(qry.exec("SELECT Username, Password, Role FROM Users WHERE UserName=\'" + Username + "\' AND Password=\'"+Password+"\' "))
+    qry.prepare("SELECT Username, Password, Role FROM Users WHERE UserName=\'" + Username + "\' AND Password=\'"+Password+"\' ");
+
+    if(qry.exec())
     {
         if (qry.next())
         {
@@ -70,8 +70,13 @@ void MainWindow::on_btnLogin_clicked()
 
             QMessageBox::warning(this, "Login was successful",msg);
 
+            // Closing Connection
+            connClose();
+
+            //Close login form
             this->close();
 
+            //open New windows
             HomeWindow homewindow;
             homewindow.setModal(true);
             homewindow.exec();
