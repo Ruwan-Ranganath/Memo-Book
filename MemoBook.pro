@@ -19,10 +19,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    homewindow.cpp
+    adminwindow.cpp
 
 HEADERS  += mainwindow.h \
-    homewindow.h
+    adminwindow.h
 
 FORMS    += mainwindow.ui \
-    homewindow.ui
+    adminwindow.ui

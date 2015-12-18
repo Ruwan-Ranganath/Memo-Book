@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QMessageBox"
-
+#include "adminwindow.h"
 
 
 
@@ -77,9 +77,12 @@ void MainWindow::on_btnLogin_clicked()
             this->close();
 
             //open New windows
-            HomeWindow homewindow;
-            homewindow.setModal(true);
-            homewindow.exec();
+            AdminWindow admin;
+            admin.setModal(true);
+            admin.exec();
+
+
+
 
         }else {
             ui->lblResult->setText("[-] Wrong Username and Password");

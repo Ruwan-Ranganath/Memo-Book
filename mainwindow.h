@@ -13,10 +13,9 @@
 #include <QtSql/QSql>
 #include <QtSql/QSqlDatabase>
 
-
-#include "homewindow.h"
-
 #define Path_to_DB "E:/qt-projects/memo.sqlite"
+
+
 
 namespace Ui {
 class MainWindow;
@@ -38,6 +37,7 @@ public:
 
     bool connOpen()
     {
+
         myDB = QSqlDatabase::addDatabase("QSQLITE");
         myDB.setDatabaseName(Path_to_DB);
         QFileInfo checkFile(Path_to_DB);
