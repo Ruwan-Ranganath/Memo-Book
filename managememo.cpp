@@ -38,6 +38,7 @@ void ManageMemo::on_pushButton_clicked()
     modal->setQuery(*qry);
 
     ui->tableView->setModel(modal);
+    ui->comboBox->setModel(modal);
 
     conn.connClose();
 
