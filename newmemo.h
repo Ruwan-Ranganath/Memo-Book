@@ -2,6 +2,7 @@
 #define NEWMEMO_H
 
 #include <QDialog>
+#include "mainwindow.h"
 
 namespace Ui {
 class NewMemo;
@@ -14,6 +15,9 @@ class NewMemo : public QDialog
 public:
     explicit NewMemo(QWidget *parent = 0);
     ~NewMemo();
+
+private slots:
+    void on_btnMemoSave_clicked();
 
 private:
     Ui::NewMemo *ui;

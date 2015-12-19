@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>AdminWindow</class>
  <widget class="QDialog" name="AdminWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Admin Window</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">

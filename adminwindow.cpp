@@ -1,5 +1,6 @@
 #include "adminwindow.h"
 #include "ui_adminwindow.h"
+#include "newmemo.h"
 
 AdminWindow::AdminWindow(QWidget *parent) :
     QDialog(parent),
@@ -18,4 +19,11 @@ AdminWindow::AdminWindow(QWidget *parent) :
 AdminWindow::~AdminWindow()
 {
     delete ui;
+}
+
+void AdminWindow::on_pushButton_clicked()
+{
+    NewMemo newmem;
+    newmem.setModal(true);
+    newmem.exec();
 }
