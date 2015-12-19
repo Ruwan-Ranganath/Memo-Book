@@ -12,7 +12,10 @@
 #include <QSqlDatabase>
 #include <QtSql/QSql>
 #include <QtSql/QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 
+// Database path -- Need proper Upgrade .
 #define Path_to_DB "E:/qt-projects/memo.sqlite"
 
 
@@ -53,6 +56,7 @@ public:
                qDebug()<<("'<b>[+] Lost Connection to database</b>");
                 return false;
         }
+        return 0;
     }
 
 

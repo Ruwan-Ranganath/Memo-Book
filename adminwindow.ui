@@ -77,7 +77,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Project Details</string>
+     <string>Manage Memos</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">

@@ -19,6 +19,10 @@ public:
 private slots:
     void on_btnMemoSave_clicked();
 
+    void on_btnmemoUpdate_clicked();
+
+    void on_btnmemodelete_clicked();
+
 private:
     Ui::NewMemo *ui;
 };

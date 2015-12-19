@@ -20,14 +20,17 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     adminwindow.cpp \
-    newmemo.cpp
+    newmemo.cpp \
+    managememo.cpp
 
 HEADERS  += mainwindow.h \
     adminwindow.h \
-    newmemo.h
+    newmemo.h \
+    managememo.h
 
 FORMS    += mainwindow.ui \
     adminwindow.ui \
-    newmemo.ui
+    newmemo.ui \
+    managememo.ui
 
 OTHER_FILES += *.txt \ *.sqlite
