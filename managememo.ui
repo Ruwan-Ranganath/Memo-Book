@@ -68,7 +68,7 @@
      <item>
       <widget class="QPushButton" name="btnUpdate">
        <property name="text">
-        <string>Update</string>
+        <string>Archive</string>
        </property>
       </widget>
      </item>
