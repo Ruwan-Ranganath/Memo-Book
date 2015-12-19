@@ -29,7 +29,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>246</x>
+     <x>260</x>
      <y>460</y>
      <width>121</width>
      <height>20</height>
@@ -44,25 +44,15 @@
     <rect>
      <x>20</x>
      <y>450</y>
-     <width>121</width>
+     <width>151</width>
      <height>20</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QPushButton" name="btnmemodelete">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>450</y>
-     <width>81</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Delete Memo</string>
+   <property name="placeholderText">
+    <string>Add Memo ID to Update</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -75,12 +65,19 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLineEdit" name="memoTitile"/>
+       <widget class="QLineEdit" name="memoTitile">
+        <property name="placeholderText">
+         <string>Memo Title</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPlainTextEdit" name="plainTextEdit">
         <property name="plainText">
          <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Memo Body</string>
         </property>
        </widget>
       </item>

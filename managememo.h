@@ -19,6 +19,12 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_btnDelete_clicked();
+
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
+    void on_tableView_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::ManageMemo *ui;
 };

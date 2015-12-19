@@ -95,7 +95,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="txtsearch">
        <property name="placeholderText">
         <string>Search</string>
        </property>
