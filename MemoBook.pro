@@ -21,16 +21,19 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     adminwindow.cpp \
     newmemo.cpp \
-    managememo.cpp
+    managememo.cpp \
+    imageviewer.cpp
 
 HEADERS  += mainwindow.h \
     adminwindow.h \
     newmemo.h \
-    managememo.h
+    managememo.h \
+    imageviewer.h
 
 FORMS    += mainwindow.ui \
     adminwindow.ui \
     newmemo.ui \
-    managememo.ui
+    managememo.ui \
+    imageviewer.ui
 
 OTHER_FILES += *.txt \ *.sqlite

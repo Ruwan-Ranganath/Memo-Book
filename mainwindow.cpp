@@ -65,7 +65,6 @@ void MainWindow::on_btnLogin_clicked()
             ui->lblResult->setText("[+] Valid User Name and Password");
 
             QString msg = "Username = " +qry.value(0).toString()+" \n" +
-                          "Password = " +qry.value(1).toString()+" \n" +
                           "Role =" +qry.value(2).toString();
 
             QMessageBox::warning(this, "Login was successful",msg);

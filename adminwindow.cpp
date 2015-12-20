@@ -2,6 +2,7 @@
 #include "ui_adminwindow.h"
 #include "newmemo.h"
 #include "managememo.h"
+#include "imageviewer.h"
 
 AdminWindow::AdminWindow(QWidget *parent) :
     QDialog(parent),
@@ -34,4 +35,11 @@ void AdminWindow::on_pushButton_2_clicked()
     ManageMemo mngmemo;
     mngmemo.setModal(true);
     mngmemo.exec();
+}
+
+void AdminWindow::on_pushButton_3_clicked()
+{
+    ImageViewer imgv;
+    imgv.setModal(true);
+    imgv.exec();
 }
